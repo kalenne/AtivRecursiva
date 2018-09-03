@@ -5,6 +5,7 @@ public class ListaEnc {
     private Info ultimo;    // O ultimo dado;
     int cont;
 
+    // 2
     public void inserir(Object elemento) {  // Inserir no começo da lista.
         Info novo = new Info(this.primeiro, elemento);
         this.primeiro = novo;
@@ -16,6 +17,7 @@ public class ListaEnc {
 
     }
 
+    // 3
     public String toString() {
         if (this.cont == 0) { // Informando que é uma lista vazia.
             return "[]";
@@ -34,6 +36,7 @@ public class ListaEnc {
         return builder.toString();
     }
 
+    // 4
     public int empty() { // Verificar se está vazio ou não.
         if (this.primeiro == null) {
             return 1;
@@ -42,9 +45,9 @@ public class ListaEnc {
         }
     }
 
+    // 5
     public boolean buscar(Object elemento) {  // Vê se certo existe na lista.
         Info atual = this.primeiro;
-
         while (atual != null) { // Enquanto atual não for nula...
             if (atual.getElemento().equals(elemento)) { // Se o elemento for igual ao elemento
                 return true; // Verdadeiro
@@ -54,6 +57,7 @@ public class ListaEnc {
         return false; //  Se nada disso for verdadeiro, retorne falso
     }
 
+    // 6
     public boolean ocupacao(int posicao) { // irá ver se a posição foi ocupada ou não.
         return posicao >= 0 && posicao <= this.cont;
     }
@@ -69,6 +73,7 @@ public class ListaEnc {
         }
     }
 
+    // 7
     public void removetudo(){
        while(cont != 0){ // Enquanto cont nao for 0...
            this.primeiro = this.primeiro.getProx(); // vai pegar o primeiro valor, e vai trocar pelo proximo.
@@ -78,7 +83,4 @@ public class ListaEnc {
            this.ultimo = null; // se o cont tiver 0, será null.
        }
     }
-
 }
-
-

@@ -3,7 +3,7 @@ package caelum;
 public class Info {
 
     private Info prox; // O ponteiro para o próximo dado.
-    private Info ant;
+    private Info ant; // Anterior
 
     public Info getAnt() {
         return ant;
